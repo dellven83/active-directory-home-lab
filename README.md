@@ -1,4 +1,3 @@
-<img width="2555" height="1437" alt="Creating client to connect to server and then pinging it to check connection" src="https://github.com/user-attachments/assets/0d8339ed-e0f3-4a04-9216-a962a86759aa" />
 # Active Directory Home Lab
 
 ## Project Overview
@@ -67,6 +66,9 @@ VMware Workstation
 - Created a new domain
 
 Screenshot: <img width="1911" height="1439" alt="setting up Domain server with foresr" src="https://github.com/user-attachments/assets/96c2674c-1790-477b-8f22-1f96e817b767" />
+<img width="2555" height="1428" alt="Me longing in from a user i created within the server" src="https://github.com/user-attachments/assets/02f952fa-627d-4f1d-bf0c-00a5fd6edcc7" />
+<img width="2559" height="1439" alt="installing window server 2025" src="https://github.com/user-attachments/assets/d561baf0-b725-4e1f-9fbb-1f8e5dc0c6f3" />
+
 
 
 ![Domain Controller](screenshots/03-domain-controller.png)
@@ -77,7 +79,8 @@ Screenshot: <img width="1911" height="1439" alt="setting up Domain server with f
 
 The Windows 11 virtual machine was successfully joined to the Active Directory domain and authenticated using domain credentials.
 
-Screenshot:
+Screenshot: <img width="2555" height="1437" alt="Creating client to connect to server and then pinging it to check connection" src="https://github.com/user-attachments/assets/93d7ee4c-f430-4e55-83ca-7c1834482f03" />
+
 
 ![Client Joined](screenshots/10-client-domain-joined.png)
 
@@ -93,7 +96,8 @@ Example:
 - Groups
 - Computers
 
-Screenshot:
+Screenshot: ![Uploading Me longing in from a user i created within the server.png…]()
+
 
 ![OU Structure](screenshots/04-active-directory-users-computers.png)
 
