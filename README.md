@@ -65,7 +65,8 @@ VMware Workstation
 - Configured DNS
 - Created a new domain
 
-Screenshot:
+Screenshot: <img width="1911" height="1439" alt="setting up Domain server with foresr" src="https://github.com/user-attachments/assets/96c2674c-1790-477b-8f22-1f96e817b767" />
+
 
 ![Domain Controller](screenshots/03-domain-controller.png)
 
