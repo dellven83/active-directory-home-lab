@@ -1,3 +1,4 @@
+<img width="2555" height="1437" alt="Creating client to connect to server and then pinging it to check connection" src="https://github.com/user-attachments/assets/0d8339ed-e0f3-4a04-9216-a962a86759aa" />
 # Active Directory Home Lab
 
 ## Project Overview
