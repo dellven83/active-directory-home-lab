@@ -1,0 +1,11 @@
+# VMware / OS artifacts
+*.vmem
+*.vmdk
+*.nvram
+*.vmss
+*.vswp
+*.lck/
+
+# Windows generated files
+Thumbs.db
+Desktop.ini

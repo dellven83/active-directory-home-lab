@@ -1,208 +1,255 @@
-# Active Directory Home Lab
+# 🖥️ Active Directory & Windows Server Home Lab
 
-## Project Overview
+> **Hands-on IT infrastructure lab built with VMware Workstation,
+> Windows Server, Active Directory, Group Policy, DHCP, file sharing,
+> and Windows 11 clients.**
 
-This project demonstrates the deployment and administration of a Windows Active Directory Domain Services (AD DS) environment using VMware Workstation.
+## 🎯 Lab Overview
 
-The lab simulates a small business network with a Domain Controller and a Windows 11 client joined to the domain. Users, Organizational Units, Security Groups, and NTFS permissions were configured to demonstrate identity and access management concepts commonly used in enterprise environments.
+This repository documents my hands-on Windows infrastructure home lab.
+The goal was to build and manage a small Windows domain environment from
+the ground up and practice tasks commonly performed in **System
+Administration, IAM, Infrastructure, and IT Support** roles.
 
----
+### 🧰 Environment
 
-## Technologies Used
+-   🖥️ **Hypervisor:** VMware Workstation
+-   🪟 **Server:** Windows Server 2025 / Windows Server 2022
+-   💻 **Client:** Windows 11
+-   🔐 **Directory Services:** Active Directory Domain Services (AD DS)
+-   🛡️ **Security:** Group Policy, password policy, account lockout,
+    USB/device restrictions
+-   🌐 **Networking:** DHCP, IP configuration, connectivity testing
+-   📁 **File Services:** Shared folders, NTFS/share permissions, drive
+    mapping, quotas
 
-- VMware Workstation
-- Windows Server 2025
-- Windows 11 Enterprise
-- Active Directory Domain Services (AD DS)
-- DNS
-- Organizational Units (OUs)
-- Security Groups
-- NTFS Permissions
-- File and Folder Sharing
+## 🚀 Skills Demonstrated
 
----
+-   Active Directory domain creation and management
+-   Domain-joining Windows clients
+-   User and administrative account management
+-   Service account configuration
+-   Organizational Units (OUs) and Group Policy
+-   Password and account lockout policies
+-   DHCP scope configuration and reservations
+-   Network connectivity troubleshooting
+-   Shared folder and permission management
+-   Network drive mapping
+-   Storage quotas
+-   Restricting removable storage and Control Panel access
+-   Client startup automation and browser configuration
+-   Sysinternals tools and domain integration
 
-## Lab Architecture
+## 📸 Lab Evidence
 
-```
-VMware Workstation
+The repository contains **35 unique screenshots**. Duplicate screenshots
+were removed so each lab step is represented once.
 
-│
-├── Windows Server 2025
-│     • Domain Controller
-│     • DNS Server
-│     • Active Directory
-│
-└── Windows 11 Client
-      • Joined to Domain
-      • Authenticated with Domain Accounts
-```
+## 🖥️ Server & Active Directory Setup
 
----
+### Setting up the sysinternal and connecting it to the domain +user account i created for it
 
-## Objectives
+![Setting up the sysinternal and connecting it to the domain +user
+account i created for
+it](screenshots/03-setting-up-the-sysinternal-and-connecting-it-to-the-domain-user-account-i-created-for-it.jpg)
 
-- Install Windows Server 2025
-- Promote server to Domain Controller
-- Create a new Active Directory Domain
-- Join a Windows 11 client to the domain
-- Create Organizational Units
-- Create Domain Users
-- Create Security Groups
-- Assign users to Security Groups
-- Configure shared folders
-- Configure NTFS permissions
-- Restrict folder access based on Security Groups
+### Creating service account(1)
 
----
+![Creating service
+account(1)](screenshots/10-creating-service-account.jpg)
 
-## Configuration Steps
+### installing window server 2025
 
-### 1. Created Domain Controller
+![installing window server
+2025](screenshots/14-installing-window-server-2025.jpg)
 
-- Installed Active Directory Domain Services
-- Promoted Windows Server to Domain Controller
-- Configured DNS
-- Created a new domain
+### Admin powershell (1)
 
-Screenshot: <img width="1911" height="1439" alt="setting up Domain server with foresr" src="https://github.com/user-attachments/assets/96c2674c-1790-477b-8f22-1f96e817b767" />
-<img width="2555" height="1428" alt="Me longing in from a user i created within the server" src="https://github.com/user-attachments/assets/02f952fa-627d-4f1d-bf0c-00a5fd6edcc7" />
-<img width="2559" height="1439" alt="installing window server 2025" src="https://github.com/user-attachments/assets/d561baf0-b725-4e1f-9fbb-1f8e5dc0c6f3" />
+![Admin powershell (1)](screenshots/15-admin-powershell.jpg)
 
+### Creating an admin account
 
+![Creating an admin
+account](screenshots/22-creating-an-admin-account.jpg)
 
-![Domain Controller](screenshots/03-domain-controller.png)
+### Admin domain i made so i can have client join domain(1)
 
----
+![Admin domain i made so i can have client join
+domain(1)](screenshots/34-admin-domain-i-made-so-i-can-have-client-join-domain.jpg)
 
-### 2. Joined Windows 11 Client
+### setting up Domain server with foresr
 
-The Windows 11 virtual machine was successfully joined to the Active Directory domain and authenticated using domain credentials.
+![setting up Domain server with
+foresr](screenshots/35-setting-up-domain-server-with-foresr.jpg)
 
-Screenshot: <img width="2555" height="1437" alt="Creating client to connect to server and then pinging it to check connection" src="https://github.com/user-attachments/assets/93d7ee4c-f430-4e55-83ca-7c1834482f03" />
+## 🌐 Networking & DHCP
 
+### Resrvation for printer
 
-![Client Joined](screenshots/10-client-domain-joined.png)
+![Resrvation for printer](screenshots/01-resrvation-for-printer.jpg)
 
----
+### dhcp to domain(1)
 
-### 3. Created Organizational Units
+![dhcp to domain(1)](screenshots/05-dhcp-to-domain.jpg)
 
-Organized objects into OUs for easier administration.
+### Creating client to connect to server and then pinging it to check connection
 
-Example:
+![Creating client to connect to server and then pinging it to check
+connection](screenshots/06-creating-client-to-connect-to-server-and-then-pinging-it-to-check-connection.jpg)
 
-- Users
-- Groups
-- Computers
+### dhcp p2
 
-Screenshot: ![Uploading Me longing in from a user i created within the server.png…]()
+![dhcp p2](screenshots/12-dhcp-p2.jpg)
 
+### dhcp day lease(1)
 
-![OU Structure](screenshots/04-active-directory-users-computers.png)
+![dhcp day lease(1)](screenshots/17-dhcp-day-lease.jpg)
 
----
+### DHCP printer reservation set up
 
-### 4. Created Users
+![DHCP printer reservation set
+up](screenshots/26-dhcp-printer-reservation-set-up.jpg)
 
-Created multiple domain user accounts representing employees.
+### Configure client to same network as domain server
 
-Examples:
+![Configure client to same network as domain
+server](screenshots/27-configure-client-to-same-network-as-domain-server.jpg)
 
-- John Smith
-- Sarah Jones
-- Mike Brown
+### dhcp finish(1)
 
-Screenshot:
+![dhcp finish(1)](screenshots/28-dhcp-finish.jpg)
 
-![Users](screenshots/06-users.png)
+### dhcp setup reserve
 
----
+![dhcp setup reserve](screenshots/29-dhcp-setup-reserve.jpg)
 
-### 5. Created Security Groups
+## 📁 File Sharing & Permissions
 
-Created department-based Security Groups.
+### Mapping shared folder to client desktop
 
-Examples:
+![Mapping shared folder to client
+desktop](screenshots/02-mapping-shared-folder-to-client-desktop.jpg)
 
-- HR
-- IT
-- Finance
-- Sales
+### Drive mapping for users
 
-Users were assigned to their respective groups.
+![Drive mapping for users](screenshots/16-drive-mapping-for-users.jpg)
 
-Screenshot:
+### Making a network Mapp so client shared folder remains active after restarting computer
 
-![Security Groups](screenshots/05-security-groups.png)
+![Making a network Mapp so client shared folder remains active after
+restarting
+computer](screenshots/19-making-a-network-mapp-so-client-shared-folder-remains-active-after-restarting-computer.jpg)
 
----
+### quota for shared folder, so space is preserve
 
-### 6. Configured Shared Folders
+![quota for shared folder, so space is
+preserve](screenshots/20-quota-for-shared-folder-so-space-is-preserve.jpg)
 
-Created departmental folders on the server.
+### Shared folder created from server
 
-Example:
+![Shared folder created from
+server](screenshots/32-shared-folder-created-from-server.jpg)
 
-```
-Shared
+### Setting up shared permissions for file sharing
 
-├── HR
-├── Finance
-├── IT
-└── Sales
-```
+![Setting up shared permissions for file
+sharing](screenshots/33-setting-up-shared-permissions-for-file-sharing.jpg)
 
----
+## 🛡️ Group Policy & Security
 
-### 7. Configured NTFS Permissions
+### Putting limitation on file types for users
 
-Configured folder permissions using Security Groups instead of assigning permissions directly to individual users.
+![Putting limitation on file types for
+users](screenshots/04-putting-limitation-on-file-types-for-users.jpg)
 
-Steps performed:
+### Created a gpo so noone else could logon as something else on the service account
 
-- Disabled inheritance
-- Removed unnecessary inherited permissions
-- Added department Security Groups
-- Granted appropriate Read/Modify access
-- Verified unauthorized users could not access restricted folders
+![Created a gpo so noone else could logon as something else on the
+service
+account](screenshots/08-created-a-gpo-so-noone-else-could-logon-as-something-else-on-the-service-account.jpg)
 
-Screenshot:
+### Desktop wallpaper group policy(1)
 
-![NTFS Permissions](screenshots/08-ntfs-permissions.png)
+![Desktop wallpaper group
+policy(1)](screenshots/09-desktop-wallpaper-group-policy.jpg)
 
----
+### First GPO password policy(1)
 
-## Skills Demonstrated
+![First GPO password
+policy(1)](screenshots/11-first-gpo-password-policy.jpg)
 
-- Active Directory Administration
-- Windows Server Administration
-- Domain Controller Deployment
-- DNS Configuration
-- Identity and Access Management (IAM)
-- User and Group Management
-- NTFS Permissions
-- Principle of Least Privilege
-- Access Control
-- File Server Administration
+### Account lockout policy to prevent brute force attack
 
----
+![Account lockout policy to prevent brute force
+attack](screenshots/13-account-lockout-policy-to-prevent-brute-force-attack.jpg)
 
-## Results
+### USB Storage deny GPO policy
 
-Successfully deployed a functional Active Directory environment consisting of:
+![USB Storage deny GPO
+policy](screenshots/21-usb-storage-deny-gpo-policy.jpg)
 
-- 1 Windows Server 2025 Domain Controller
-- 1 Windows 11 Domain Client
-- Active Directory Domain Services
-- Domain Users
-- Security Groups
-- Department File Shares
-- Role-Based Access Control (RBAC) using Security Groups
-- NTFS Permission Management
+### Applying gpo to OUs
 
----
+![Applying gpo to OUs](screenshots/24-applying-gpo-to-ous.jpg)
 
-## Lessons Learned
+### Enabled restriction of Control panel for users
 
-This project strengthened my understanding of enterprise Windows administration, including Active Directory deployment, user and group management, domain authentication, and implementing secure access controls using Security Groups and NTFS permissions.
+![Enabled restriction of Control panel for
+users](screenshots/25-enabled-restriction-of-control-panel-for-users.jpg)
+
+## 👤 Accounts & Domain Management
+
+### Me longing in from a user i created within the server
+
+![Me longing in from a user i created within the
+server](screenshots/31-me-longing-in-from-a-user-i-created-within-the-server.jpg)
+
+## 🚀 Client Configuration & Automation
+
+### Computer starting up website automatically and at fulll screen after restart(1)
+
+![Computer starting up website automatically and at fulll screen after
+restart(1)](screenshots/07-computer-starting-up-website-automatically-and-at-fulll-screen-after-restart.jpg)
+
+### Making prompt for window to automatically startup website after restart
+
+![Making prompt for window to automatically startup website after
+restart](screenshots/18-making-prompt-for-window-to-automatically-startup-website-after-restart.jpg)
+
+### Setting up a website as startup to see if it works
+
+![Setting up a website as startup to see if it
+works](screenshots/30-setting-up-a-website-as-startup-to-see-if-it-works.jpg)
+
+## 🧪 Testing & Validation
+
+### Screenshot 2026-07-03 155533
+
+![Screenshot 2026-07-03
+155533](screenshots/23-screenshot-2026-07-03-155533.jpg)
+
+## 🧠 What I Practiced
+
+This lab gave me practical experience with how Windows endpoints, domain
+services, users, security policies, networking, and shared resources
+work together in a domain environment.
+
+The project also helped me practice troubleshooting rather than simply
+following setup instructions---for example, validating network
+connectivity, applying policies to OUs, testing permissions, and
+confirming that client-side changes actually took effect.
+
+## 📈 Next Steps
+
+-   ☁️ Extend the lab into **Microsoft Entra ID / Azure**
+-   🔑 Build an **IAM-focused lab** with role-based access and lifecycle
+    management
+-   🐧 Add a **Linux server** and integrate it with the environment
+-   📝 Document troubleshooting scenarios and resolutions
+-   ⚙️ Automate repetitive administration tasks with **PowerShell**
+
+## 👨‍💻 Project Purpose
+
+Built as a hands-on portfolio project to demonstrate practical Windows
+Server, Active Directory, networking, security, and systems
+administration skills.
